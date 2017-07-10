@@ -1,3 +1,0 @@
-<div styele="clolr:yellow;font-size:50px;" >
-    this is myHome...
-</div>
