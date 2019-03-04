@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "node-webkit-updater": "^0.3.3",
+    "node-xlsx": "^0.11.2",
     "nw": "0.14.7-sdk",
     "vue": "^2.2.2",
     "vue-router": "^2.2.0"
@@ -72,8 +73,8 @@
   "window": {
     "title": "vue-nw-seed",
     "toolbar": false,
-    "width": 800,
-    "height": 500,
+    "width": 1920,
+    "height": 1080,
     "min_width": 800,
     "min_height": 500,
     "resizable": true,

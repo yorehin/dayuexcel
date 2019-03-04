@@ -2,13 +2,16 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Hello from '@/components/Hello'
 import Update from '@/components/Update'
+import Contrast from '../components/contrast'
+import Stream from '../components/stream'
+import Course from '../components/course'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/hello',
       name: 'Hello',
       component: Hello
     },
@@ -16,6 +19,21 @@ export default new Router({
       path: '/update',
       name: 'Update',
       component: Update
+    },
+    {
+      path: '/',
+      name: 'Course',
+      component: Course
+    },
+    {
+      path: '/contrast',
+      name: 'contrast',
+      component: Contrast
+    },
+    {
+      path: '/stream',
+      name: 'stream',
+      component: Stream
     }
   ]
 })
