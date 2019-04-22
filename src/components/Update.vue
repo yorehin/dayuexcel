@@ -69,7 +69,7 @@
   .hidden {
     display: none;
   }
-  
+
   .update-btn {
     margin-bottom: 3em;
     padding: 8px 15px;
@@ -80,11 +80,11 @@
     opacity: .5;
     transition: opacity .5s;
   }
-  
+
   .update-btn:hover {
     opacity: 1;
   }
-  
+
   .download-progress {
     margin-bottom: 3em;
   }

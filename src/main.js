@@ -6,14 +6,17 @@ import router from './router'
 import course from './components/course'
 import contrast from './components/contrast'
 import stream from './components/stream'
+import Element from 'element-ui'
 
 Vue.config.productionTip = false
 Vue.component('course', course)
 Vue.component('contrast', contrast)
 Vue.component('stream', stream)
+Vue.use (Element)
 
 // for auto update
 import { checkUpdate } from '@/utils/update.js'
+
 
 checkUpdate()
 
