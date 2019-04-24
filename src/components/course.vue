@@ -66,6 +66,58 @@
         <div class="circular9">4</div>
         <div class="circular10">5</div>
         <div class="circular11">6</div>
+        <div class="duibigongneng">对比功能</div>
+        <ul>
+          <li class="li-class"><i class="iconfont icon-dianji"></i></li>
+          <li class="li-icon"><i class="iconfont icon-daoru"></i></li>
+          <li class="li-icon"><i class="iconfont icon-daoru"></i></li>
+          <li class="li-icon"><i class="iconfont icon-danbiaoxuanzelie"></i></li>
+          <li class="li-icon"><i class="iconfont icon-duibijieguo"></i></li>
+          <li class="li-icon"><i class="iconfont icon-wancheng1"></i></li>
+        </ul>
+        <br>
+        <ul>
+          <li class="li-font">点击"对比"</li>
+          <li class="li-font1">导入基准Excel</li>
+          <li class="li-font2">导入次准Excel</li>
+          <li class="li-font3">选择对比列</li>
+          <li class="li-font4">点击"对比结果"</li>
+          <li class="li-font5">完成</li>
+        </ul>
+        <br>
+        <div class="line"></div>
+        <div class="circular0">1</div>
+        <div class="circular1">2</div>
+        <div class="circular2">3</div>
+        <div class="circular3">4</div>
+        <div class="circular4">5</div>
+        <div class="circular5">6</div>
+        <div class="duibigongneng">对比功能</div>
+        <ul>
+          <li class="li-class"><i class="iconfont icon-dianji"></i></li>
+          <li class="li-icon"><i class="iconfont icon-daoru"></i></li>
+          <li class="li-icon"><i class="iconfont icon-daoru"></i></li>
+          <li class="li-icon"><i class="iconfont icon-danbiaoxuanzelie"></i></li>
+          <li class="li-icon"><i class="iconfont icon-duibijieguo"></i></li>
+          <li class="li-icon"><i class="iconfont icon-wancheng1"></i></li>
+        </ul>
+        <br>
+        <ul>
+          <li class="li-font">点击"对比"</li>
+          <li class="li-font1">导入基准Excel</li>
+          <li class="li-font2">导入次准Excel</li>
+          <li class="li-font3">选择对比列</li>
+          <li class="li-font4">点击"对比结果"</li>
+          <li class="li-font5">完成</li>
+        </ul>
+        <br>
+        <div class="line"></div>
+        <div class="circular0">1</div>
+        <div class="circular1">2</div>
+        <div class="circular2">3</div>
+        <div class="circular3">4</div>
+        <div class="circular4">5</div>
+        <div class="circular5">6</div>
       </div>
 
     </div>

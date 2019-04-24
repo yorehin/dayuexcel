@@ -1,60 +1,59 @@
 <template>
   <div id="app">
     <div class="topRight">
+      <!--<div><router-link></router-link></div>-->
       <div></div>
       <!--倒计时-->
-      <div>{{time}}</div>
-      <i class="iconfont icon-guanbi" @click="minimized_fun">wer</i>
-      <i class="iconfont icon-zhedie" @click="close_fun">wer</i>
-      <i class="iconfont icon-zhedie" @click="close_fun">wer</i>
-      <i class="iconfont icon-zhedie" @click="close_fun">wer</i>
-    </div>
-    <div>
-      <!--这里放的是3个图标按钮-->
-      <div id="No1">
-        <img src="./assets/已购买-点击前.png" height="94" width="94"/>
-        <img src="./assets/霸气购买-点击前.png" height="94" width="94"/>
-        <img src="./assets/理性试用.png" @click="times()" height="94" width="94"/></div>
-    </div>
-    <div class="father-left">
-      <div class="heard-image">
-        <img src="static/ESCT.ico" width="112px" height="112px">
-      </div>
-      <router-link to="/contrast" tag="bi" exact>
-        <div class="contrast" >
-          <div class="contrast-div">
-            <i class="iconfont icon-tubiao-"></i>&nbsp;
-            <div class="duibi">对比</div>
-          </div>
-        </div>
-      </router-link>
-      <router-link to="/stream" tag="bi" exact>
-        <div class="screen" ><router-link to="/"></router-link>
-          <div class="shaixuane">
-          <i class="iconfont icon-shaixuan"></i>&nbsp;
-          <div class="duibi">筛选</div>
-          </div>
-        </div>
-      </router-link>
-      <router-link to="/contrast" tag="bi" exact>
-        <div class="contrast" >
-          <div class="contrast-div">
-            <i class="iconfont icon-tubiao-"></i>&nbsp;
-            <div class="duibi">隐藏</div>
-          </div>
-        </div>
-      </router-link>
-      <router-link to="/contrast" tag="bi" exact>
-        <div class="contrast" >
-          <div class="contrast-div">
-            <i class="iconfont icon-tubiao-"></i>&nbsp;
-            <div class="duibi">对比</div>
-          </div>
-        </div>
-      </router-link>
-
+      <p>{{hr}}时{{min}}分{{sec}}秒</p>
+      <i class="iconfont icon-gengduo-rotate-90" @click="minimized_fun">
+        <select>
+          <option value="1">我是下拉项目1</option>
+          <option value="2">我是下拉项目2</option>
+          <option value="3">我是下拉项目3</option>
+          <option value="4">我是下拉项目4</option>
+        </select>
+      </i>
+      <i class="iconfont icon-zuixiaohua" @click="close_fun"></i>
+      <i class="iconfont icon-zuidahua" @click="close_fun"></i>
+      <i class="iconfont icon-guanbi" @click="close_fun"></i>
     </div>
     <router-view></router-view>
+
+    <!--<div style="height: 100%; display: flex; flex-direction: row; justify-content: center; align-items: center">-->
+      <!--&lt;!&ndash;这里放的是3个图标按钮&ndash;&gt;-->
+      <!--&lt;!&ndash;<div id="No1" v-if="open != false">&ndash;&gt;-->
+        <!--&lt;!&ndash;<img src="./assets/已购买-点击前.png" @click="over()" height="94" width="94"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<img src="./assets/霸气购买-点击前.png" @click="game()" height="94" width="94"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<img src="./assets/理性试用.png" @click="times()" height="94" width="94"/>&ndash;&gt;-->
+      <!--&lt;!&ndash;</div>&ndash;&gt;-->
+      <!--<div id="No2">-->
+        <!--<img src="./assets/已购买-点击前.png" height="94" width="94"/>-->
+        <!--<input value="请输入激活码">-->
+        <!--<button onclick="">激活</button>-->
+        <!--&lt;!&ndash;<div>545<router-link :to="course">sdf</router-link></div>&ndash;&gt;-->
+      <!--</div>-->
+      <!--&lt;!&ndash;<div id="No3">&ndash;&gt;-->
+        <!--&lt;!&ndash;<img src="./assets/霸气购买-点击前.png" @click="game()" height="94" width="94"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div style="display: flex; flex-direction: row">&ndash;&gt;-->
+          <!--&lt;!&ndash;<div id="left">&ndash;&gt;-->
+            <!--&lt;!&ndash;购买说明：一个激活码可供5台电脑使用<br>&ndash;&gt;-->
+            <!--&lt;!&ndash;购买信息：<input value="请输入姓名"><br>&ndash;&gt;-->
+            <!--&lt;!&ndash;<input value="请输入邮箱"><br>&ndash;&gt;-->
+            <!--&lt;!&ndash;购买数量：<input>有优惠码 支付金额128元<br>&ndash;&gt;-->
+            <!--&lt;!&ndash;支付方式：<button>支付宝支付</button><button>微信支付</button><button>淘宝网购</button><br>&ndash;&gt;-->
+            <!--&lt;!&ndash;<button>立即购买</button>&ndash;&gt;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+          <!--&lt;!&ndash;<div id="border"></div>&ndash;&gt;-->
+          <!--&lt;!&ndash;<div id="right">&ndash;&gt;-->
+            <!--&lt;!&ndash;关注公众号获取优惠码<br>&ndash;&gt;-->
+            <!--&lt;!&ndash;<img src="./assets/公众号二维码.png" height="136" width="136"/><br>&ndash;&gt;-->
+            <!--&lt;!&ndash;扫码关注&ndash;&gt;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+      <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+
+    <!--</div>-->
   </div>
 </template>
 
@@ -68,9 +67,22 @@ export default {
   //   preparation:false
 
   data: {
+    open:false,
     version:false,
     aa: 'aaaaa',
     list:[{}],
+    startTime: null
+  },
+  mounted(){
+    let startTime = localStorage.getItem("startTime");
+    if (!startTime)
+    {
+      let now = Date.now()
+      localStorage.setItem("startTime",now)
+      this.startTime = now;
+    }
+    else
+      this.startTime = startTime
   },
   methods:{
     close_fun () {
@@ -79,16 +91,25 @@ export default {
     minimized_fun () {
       win.minimize()
     },
+    game(){
+      console.log('game')
+    },
+    over(){
+      this.open = true
+      console.log('over')
+    },
     times(){
-      var date = new Date()
-      var now = date.getTime();
-      var myDate=new Date()
-      myDate.setDate(myDate.getDate()+1)
+      let startTime = this.startTime
+      let startDate = new Date()
+      startDate.setTime(startTime)
+      console.log('------>>>>',startDate)
+      startDate.setDate(startDate.getDate()+1)
+      let myDate = startDate
       var end = myDate.getTime();
       console.log(end + 'end')
-      console.log(now + 'now')
+      console.log(startTime + 'now')
 //时间差
-      var msec = end - now;
+      var msec = end - Date.now();
       console.log(msec + 'msec')
       var day = parseInt(msec / 1000 / 60 / 60 / 24)
       var hr = parseInt(msec / 1000 / 60 / 60 % 24)
@@ -109,29 +130,6 @@ export default {
     'course': course
   }
 }
-  function countdown () {
-    // 目标日期时间戳
-    const end = Date.parse(new Date('2017-12-01'))
-    // 当前时间戳
-    const now = Date.parse(new Date())
-    // 相差的毫秒数
-    const msec = end - now
-    // 计算时分秒数
-    let day = parseInt(msec / 1000 / 60 / 60 / 24)
-    let hr = parseInt(msec / 1000 / 60 / 60 % 24)
-    let min = parseInt(msec / 1000 / 60 % 60)
-    let sec = parseInt(msec / 1000 % 60)
-    // 个位数前补零
-    hr = hr > 9 ? hr : '0' + hr
-    min = min > 9 ? min : '0' + min
-    sec = sec > 9 ? sec : '0' + sec
-    // 控制台打印
-    console.log(`${day}天 ${hr}小时 ${min}分钟 ${sec}秒`)
-    // 一秒后递归
-    setTimeout(function () {
-      countdown()
-    }, 1000)
-  }
 </script>
 
 <style scoped>
@@ -144,34 +142,96 @@ export default {
   /*color: #2c3e50;*/
   /*margin-top: 60px;*/
 /*}*/
+#left{
+  font-size: 12px;
+  color: white;
+  background-color: #20283c;
+}
+  #right{
+    text-align: center;
+    color: white;
+    background-color: #20283c;
+  }
+  #app{
+    background-color: #1c2438;
+    width: 100vw;
+    height: 100vh;
 
-
+  }
+  #No2{
+    border: white dashed 1px;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  #No2 > input{
+    text-align: center;
+  }
+  #No2 > button{
+    color: white;
+    background-color: #ff5f4f;
+  }
+  #No3{
+    border: white dashed 1px;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  #border{
+    height: 202px;
+    width: 1px;
+    border-left: 1px solid white;
+  }
   .duibi{
     margin-top: 3px;
   }
   #No1{
-    width: 100%;
-    height: 100%;
+    border: white dashed 1px;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10%;
+  }
+
+  #No1 > img{
+    padding: 10%;
   }
 
   .topRight {
     display: flex;
     flex-direction: row;
     -webkit-app-region: drag;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;}
 
-    div{
+  .topRight> div{
       flex: 1;
     }
 
-    i {
+  .topRight> i {
       cursor: pointer;
       color: #fff;
       font-size: 25px;
       margin-right: 10px;
     }
-
+  .topRight > p{
+    color: white;
+    /*color: white;*/
+    /*background-color: white;*/
   }
+
+
 
   .shaixuan{
     margin-top: 3px;

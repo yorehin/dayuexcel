@@ -5,6 +5,7 @@ import Update from '@/components/Update'
 import Contrast from '../components/contrast'
 import Stream from '../components/stream'
 import Course from '../components/course'
+import Home from '../components/home'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/stream',
       name: 'stream',
       component: Stream
+    },
+    {
+      path: '/home',
+      name: 'home',
+      component: Home
     }
   ]
 })
