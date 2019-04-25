@@ -1,56 +1,95 @@
 <template>
   <div id="app">
-    <div class="topRight">
-      <!--<div><router-link></router-link></div>-->
-      <div></div>
-      <!--倒计时-->
-      <p>{{hr}}时{{min}}分{{sec}}秒</p>
-      <i class="iconfont icon-gengduo-rotate-90" @click="minimized_fun">
-        <select>
-          <option value="1">我是下拉项目1</option>
-          <option value="2">我是下拉项目2</option>
-          <option value="3">我是下拉项目3</option>
-          <option value="4">我是下拉项目4</option>
-        </select>
-      </i>
-      <i class="iconfont icon-zuixiaohua" @click="close_fun"></i>
-      <i class="iconfont icon-zuidahua" @click="close_fun"></i>
-      <i class="iconfont icon-guanbi" @click="close_fun"></i>
-    </div>
+    <!--<div class="topRight">-->
+      <!--&lt;!&ndash;<div><router-link></router-link></div>&ndash;&gt;-->
+      <!--<div></div>-->
+      <!--&lt;!&ndash;倒计时&ndash;&gt;-->
+      <!--<p>{{hr}}时{{min}}分{{sec}}秒</p>-->
+      <!--<i class="iconfont icon-gengduo-rotate-90" @click="minimized_fun">-->
+        <!--<select>-->
+          <!--<option value="1">我是下拉项目1</option>-->
+          <!--<option value="2">我是下拉项目2</option>-->
+          <!--<option value="3">我是下拉项目3</option>-->
+          <!--<option value="4">我是下拉项目4</option>-->
+        <!--</select>-->
+      <!--</i>-->
+      <!--<i class="iconfont icon-zuixiaohua" @click="close_fun"></i>-->
+      <!--<i class="iconfont icon-zuidahua" @click="close_fun"></i>-->
+      <!--<i class="iconfont icon-guanbi" @click="close_fun"></i>-->
+    <!--</div>-->
+    <!--<div class="father-left">-->
+      <!--<div class="heard-image">-->
+        <!--<img src="static/ESCT.ico" width="112px" height="112px">-->
+      <!--</div>-->
+      <!--<router-link to="/contrast" tag="bi" exact>-->
+        <!--<div class="contrast" >-->
+          <!--<div class="contrast-div">-->
+            <!--<i class="iconfont icon-tubiao-"></i>&nbsp;-->
+            <!--<div class="duibi">对比</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</router-link>-->
+      <!--<router-link to="/stream" tag="bi" exact>-->
+        <!--<div class="screen" ><router-link to="/"></router-link>-->
+          <!--<div class="shaixuane">-->
+            <!--<i class="iconfont icon-shaixuan"></i>&nbsp;-->
+            <!--<div class="duibi">筛选</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</router-link>-->
+      <!--<router-link to="/stream" tag="bi" exact>-->
+        <!--<div class="screen" ><router-link to="/"></router-link>-->
+          <!--<div class="shaixuane">-->
+            <!--<i class="iconfont icon-yincang"></i>&nbsp;-->
+            <!--<div class="duibi">隐藏</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</router-link>-->
+      <!--<router-link to="/stream" tag="bi" exact>-->
+        <!--<div class="screen" ><router-link to="/"></router-link>-->
+          <!--<div class="shaixuane">-->
+            <!--<i class="iconfont icon-moban1"></i>&nbsp;-->
+            <!--<div class="duibi">模板</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</router-link>-->
+      <!--<div style="flex: 1"></div>-->
+      <!--<div><i class="iconfont icon-zhedie" @click="close_fun" style="color: white">折叠</i></div>-->
+    <!--</div>-->
     <router-view></router-view>
 
     <!--<div style="height: 100%; display: flex; flex-direction: row; justify-content: center; align-items: center">-->
       <!--&lt;!&ndash;这里放的是3个图标按钮&ndash;&gt;-->
-      <!--&lt;!&ndash;<div id="No1" v-if="open != false">&ndash;&gt;-->
-        <!--&lt;!&ndash;<img src="./assets/已购买-点击前.png" @click="over()" height="94" width="94"/>&ndash;&gt;-->
-        <!--&lt;!&ndash;<img src="./assets/霸气购买-点击前.png" @click="game()" height="94" width="94"/>&ndash;&gt;-->
-        <!--&lt;!&ndash;<img src="./assets/理性试用.png" @click="times()" height="94" width="94"/>&ndash;&gt;-->
-      <!--&lt;!&ndash;</div>&ndash;&gt;-->
+      <!--<div id="No1" v-if="open != false">-->
+        <!--<img src="./assets/已购买-点击前.png" @click="over()" height="94" width="94"/>-->
+        <!--<img src="./assets/霸气购买-点击前.png" @click="game()" height="94" width="94"/>-->
+        <!--<img src="./assets/理性试用.png" @click="times()" height="94" width="94"/>-->
+      <!--</div>-->
       <!--<div id="No2">-->
         <!--<img src="./assets/已购买-点击前.png" height="94" width="94"/>-->
         <!--<input value="请输入激活码">-->
         <!--<button onclick="">激活</button>-->
         <!--&lt;!&ndash;<div>545<router-link :to="course">sdf</router-link></div>&ndash;&gt;-->
       <!--</div>-->
-      <!--&lt;!&ndash;<div id="No3">&ndash;&gt;-->
-        <!--&lt;!&ndash;<img src="./assets/霸气购买-点击前.png" @click="game()" height="94" width="94"/>&ndash;&gt;-->
-        <!--&lt;!&ndash;<div style="display: flex; flex-direction: row">&ndash;&gt;-->
-          <!--&lt;!&ndash;<div id="left">&ndash;&gt;-->
-            <!--&lt;!&ndash;购买说明：一个激活码可供5台电脑使用<br>&ndash;&gt;-->
-            <!--&lt;!&ndash;购买信息：<input value="请输入姓名"><br>&ndash;&gt;-->
-            <!--&lt;!&ndash;<input value="请输入邮箱"><br>&ndash;&gt;-->
-            <!--&lt;!&ndash;购买数量：<input>有优惠码 支付金额128元<br>&ndash;&gt;-->
-            <!--&lt;!&ndash;支付方式：<button>支付宝支付</button><button>微信支付</button><button>淘宝网购</button><br>&ndash;&gt;-->
-            <!--&lt;!&ndash;<button>立即购买</button>&ndash;&gt;-->
-          <!--&lt;!&ndash;</div>&ndash;&gt;-->
-          <!--&lt;!&ndash;<div id="border"></div>&ndash;&gt;-->
-          <!--&lt;!&ndash;<div id="right">&ndash;&gt;-->
-            <!--&lt;!&ndash;关注公众号获取优惠码<br>&ndash;&gt;-->
-            <!--&lt;!&ndash;<img src="./assets/公众号二维码.png" height="136" width="136"/><br>&ndash;&gt;-->
-            <!--&lt;!&ndash;扫码关注&ndash;&gt;-->
-          <!--&lt;!&ndash;</div>&ndash;&gt;-->
-        <!--&lt;!&ndash;</div>&ndash;&gt;-->
-      <!--&lt;!&ndash;</div>&ndash;&gt;-->
+      <!--<div id="No3">-->
+        <!--<img src="./assets/霸气购买-点击前.png" @click="game()" height="94" width="94"/>-->
+        <!--<div style="display: flex; flex-direction: row">-->
+          <!--<div id="left">-->
+            <!--购买说明：一个激活码可供5台电脑使用<br>-->
+            <!--购买信息：<input value="请输入姓名"><br>-->
+            <!--<input value="请输入邮箱"><br>-->
+            <!--购买数量：<input>有优惠码 支付金额128元<br>-->
+            <!--支付方式：<button>支付宝支付</button><button>微信支付</button><button>淘宝网购</button><br>-->
+            <!--<button>立即购买</button>-->
+          <!--</div>-->
+          <!--<div id="border"></div>-->
+          <!--<div id="right">-->
+            <!--关注公众号获取优惠码<br>-->
+            <!--<img src="./assets/公众号二维码.png" height="136" width="136"/><br>-->
+            <!--扫码关注-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
 
 
     <!--</div>-->
@@ -97,33 +136,6 @@ export default {
     over(){
       this.open = true
       console.log('over')
-    },
-    times(){
-      let startTime = this.startTime
-      let startDate = new Date()
-      startDate.setTime(startTime)
-      console.log('------>>>>',startDate)
-      startDate.setDate(startDate.getDate()+1)
-      let myDate = startDate
-      var end = myDate.getTime();
-      console.log(end + 'end')
-      console.log(startTime + 'now')
-//时间差
-      var msec = end - Date.now();
-      console.log(msec + 'msec')
-      var day = parseInt(msec / 1000 / 60 / 60 / 24)
-      var hr = parseInt(msec / 1000 / 60 / 60 % 24)
-      var min = parseInt(msec / 1000 / 60 % 60)
-      var sec = parseInt(msec / 1000 % 60)
-      this.day = day
-      this.hr = hr > 9 ? hr : '0' + hr
-      this.min = min > 9 ? min : '0' + min
-      this.sec = sec > 9 ? sec : '0' + sec
-      console.log(`${day}天 ${hr}小时 ${min}分钟 ${sec}秒`)
-      const that = this
-      setTimeout(function () {
-        that.times()
-      }, 1000)
     },
   },
   component: {
@@ -237,6 +249,8 @@ export default {
     margin-top: 3px;
   }
   .father-left{
+    display: flex;
+    flex-direction: column;
     margin-top: 0px;
     background: #1C2438;
     /*height: 1080px;*/

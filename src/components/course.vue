@@ -66,23 +66,23 @@
         <div class="circular9">4</div>
         <div class="circular10">5</div>
         <div class="circular11">6</div>
-        <div class="duibigongneng">对比功能</div>
+        <div class="duibigongneng">隐藏功能</div>
         <ul>
           <li class="li-class"><i class="iconfont icon-dianji"></i></li>
           <li class="li-icon"><i class="iconfont icon-daoru"></i></li>
-          <li class="li-icon"><i class="iconfont icon-daoru"></i></li>
           <li class="li-icon"><i class="iconfont icon-danbiaoxuanzelie"></i></li>
+          <li class="li-icon"><i class="iconfont icon-shuru"></i></li>
           <li class="li-icon"><i class="iconfont icon-duibijieguo"></i></li>
           <li class="li-icon"><i class="iconfont icon-wancheng1"></i></li>
         </ul>
         <br>
         <ul>
-          <li class="li-font">点击"对比"</li>
-          <li class="li-font1">导入基准Excel</li>
-          <li class="li-font2">导入次准Excel</li>
-          <li class="li-font3">选择对比列</li>
-          <li class="li-font4">点击"对比结果"</li>
-          <li class="li-font5">完成</li>
+          <li class="li-font">点击"隐藏"</li>
+          <li class="li-font7">导入Excel</li>
+          <li class="li-font8">选择身份证列</li>
+          <li class="li-font9">输入隐藏模板</li>
+          <li class="li-font10">点击"导出"</li>
+          <li class="li-font11">完成</li>
         </ul>
         <br>
         <div class="line"></div>
@@ -92,32 +92,29 @@
         <div class="circular3">4</div>
         <div class="circular4">5</div>
         <div class="circular5">6</div>
-        <div class="duibigongneng">对比功能</div>
+        <div class="duibigongneng">模板功能</div>
         <ul>
           <li class="li-class"><i class="iconfont icon-dianji"></i></li>
           <li class="li-icon"><i class="iconfont icon-daoru"></i></li>
           <li class="li-icon"><i class="iconfont icon-daoru"></i></li>
-          <li class="li-icon"><i class="iconfont icon-danbiaoxuanzelie"></i></li>
           <li class="li-icon"><i class="iconfont icon-duibijieguo"></i></li>
           <li class="li-icon"><i class="iconfont icon-wancheng1"></i></li>
         </ul>
         <br>
         <ul>
-          <li class="li-font">点击"对比"</li>
-          <li class="li-font1">导入基准Excel</li>
-          <li class="li-font2">导入次准Excel</li>
-          <li class="li-font3">选择对比列</li>
-          <li class="li-font4">点击"对比结果"</li>
-          <li class="li-font5">完成</li>
+          <li class="li-font">点击"模板"</li>
+          <li class="li-font1">导入模板Excel</li>
+          <li class="li-font2">导入需修改Excel</li>
+          <li class="li-font3">点击"导出"</li>
+          <li class="li-font5"></li>
         </ul>
         <br>
-        <div class="line"></div>
+        <div class="line3"></div>
         <div class="circular0">1</div>
         <div class="circular1">2</div>
         <div class="circular2">3</div>
         <div class="circular3">4</div>
         <div class="circular4">5</div>
-        <div class="circular5">6</div>
       </div>
 
     </div>
@@ -211,7 +208,7 @@
     margin-left: 80px;
   }
   .li-icon{
-    margin-left: 170px;
+    margin-left: 185px;
   }
   .li-font{
     margin-top: 6px;
@@ -404,6 +401,12 @@
     margin-top: 62px;
     border-top: 1px solid;
     width: 1182px;
+    margin-left: 20px;
+  }
+  .line3{
+    margin-top: 23px;
+    border-top: 1px solid;
+    width: 990px;
     margin-left: 20px;
   }
 </style>

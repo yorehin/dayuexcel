@@ -1,74 +1,55 @@
 <template>
-  <div>
-    <div class="topRight">
-      <!--<div><router-link></router-link></div>-->
-      <div></div>
-      <!--倒计时-->
-      <p>{{hr}}时{{min}}分{{sec}}秒</p>
-      <i class="iconfont icon-gengduo-rotate-90" @click="nav_fun">
-        <div v-if="nav">
-          <option value="1">使用指引</option>
-          <option value="2">检查更新</option>
-          <option value="3">意见反馈</option>
-          <option value="4">关于我们</option>
+    <div>
+      <div class="father-left">
+        <div class="heard-image">
+          <img src="static/ESCT.ico" width="112px" height="112px">
         </div>
-      </i>
-      <i class="iconfont icon-zuixiaohua" @click="minimize_fun;"></i>
-      <i class="iconfont icon-zuidahua" @click="maximize_fun"></i>
-      <i class="iconfont icon-guanbi" @click="close_fun"></i>
+        <router-link to="/contrast" tag="bi" exact>
+          <div class="contrast" >
+            <div class="contrast-div">
+              <i class="iconfont icon-tubiao-"></i>&nbsp;
+              <div class="duibi">对比</div>
+            </div>
+          </div>
+        </router-link>
+        <router-link to="/stream" tag="bi" exact>
+          <div class="screen" >
+            <div class="shaixuane">
+              <i class="iconfont icon-shaixuan"></i>&nbsp;
+              <div class="duibi">筛选</div>
+            </div>
+          </div>
+        </router-link>
+        <router-link tag="bi" exact>
+          <div class="screen" >
+            <div class="shaixuane">
+              <i class="iconfont icon-tubiao-"></i>&nbsp;
+              <div class="duibi">隐藏</div>
+            </div>
+          </div>
+        </router-link>
+        <router-link tag="bi" exact>
+          <div class="screen" >
+            <div class="shaixuane">
+              <i class="iconfont icon-tubiao-"></i>&nbsp;
+              <div class="duibi">模板</div>
+            </div>
+          </div>
+        </router-link>
+        <div style="flex: 1"></div>
+        <i class="iconfont icon-zhedie" @click="close_fun" style="color: white">折叠</i>
+      </div>
+      <router-view></router-view>
     </div>
-    <router-view></router-view>
-
-  </div>
 </template>
 
 <script>
-  var gui = require('nw.gui');
-  var win = gui.Window.get();
     export default {
-        name: "home",
-      data() {
-          return{
-            nav: false,
-            version:false,
-            aa: 'aaaaa',
-            list:[{}],
-            startTime: null
-          }
-      },
-      mounted(){
-        let startTime = localStorage.getItem("startTime");
-        if (!startTime)
-        {
-          let now = Date.now()
-          localStorage.setItem("startTime",now)
-          this.startTime = now;
-        }
-        else
-          this.startTime = startTime
-      },
-      methods:{
-        minimize_fun(){
-          win.minimize()
-          
-        },
-        maximize_fun(){
-          win.maximize()
-        },
-        close_fun () {
-          win.close()
-        },
-        nav_fun () {
-          this.nav = !this.nav
-          win.minimize()
-        },
-
-      },
+        name: "left"
     }
 </script>
 
 <style scoped>
-
   .father-left{
     display: flex;
     flex-direction: column;

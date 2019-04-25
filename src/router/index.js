@@ -6,16 +6,13 @@ import Contrast from '../components/contrast'
 import Stream from '../components/stream'
 import Course from '../components/course'
 import Home from '../components/home'
+import First from '../components/first'
+import Left from '../components/left'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
-    {
-      path: '/hello',
-      name: 'Hello',
-      component: Hello
-    },
     {
       path: '/update',
       name: 'Update',
@@ -23,23 +20,37 @@ export default new Router({
     },
     {
       path: '/',
-      name: 'Course',
-      component: Course
+      name: 'Home',
+      component: Home,
+      children:[
+        {
+          path:'/',
+          name:'first',
+          component:First
+        },
+        {
+          path:'/left',
+          name:'left',
+          component:Left,
+          childen:[
+            {
+              path: '/Course',
+              name: 'Course',
+              component: Course
+            },
+            {
+              path: '/',
+              name: 'contrast',
+              component: Contrast
+            },
+            {
+              path: '/stream',
+              name: 'stream',
+              component: Stream
+            }
+          ]
+        }
+      ]
     },
-    {
-      path: '/contrast',
-      name: 'contrast',
-      component: Contrast
-    },
-    {
-      path: '/stream',
-      name: 'stream',
-      component: Stream
-    },
-    {
-      path: '/home',
-      name: 'home',
-      component: Home
-    }
   ]
 })
