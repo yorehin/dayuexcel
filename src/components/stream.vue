@@ -2,37 +2,72 @@
   <div id="stream" class="background">
     <div class="nav">
       <div class="add">
-        <div class="jizhun" @click="importExcel_1">
-          <div class="jiziti">
-            <i class="iconfont icon-daoru"></i>&nbsp;导入Excel
-            <input class="importInput" type="file" ref="importFile1"/>
+        <section v-if="!pageIndex" class="nothingContent" >
+          <div class="jizhun" @click="importExcel_1">
+            <div class="jiziti">
+              <i class="iconfont icon-daoru"></i>&nbsp;导入Excel
+              <input class="importInput" type="file" ref="importFile1"/>
+            </div>
           </div>
-        </div>
-        <div class="cizhun">
-          <div class="ciziti">
-            <i class="iconfont icon-danbiaoxuanzelie"></i>&nbsp;选择筛选列
+          <div class="cizhun">
+            <div class="ciziti">
+              <i class="iconfont icon-danbiaoxuanzelie"></i>&nbsp;选择筛选列
+            </div>
           </div>
-        </div>
-        <div class="xuanzeduibi">
-          <div class="choiceContrast">
-            <i class="iconfont icon-shuru"></i>&nbsp;输入筛选条件
+          <div class="xuanzeduibi">
+            <div class="choiceContrast">
+              <i class="iconfont icon-shuru"></i>&nbsp;输入筛选条件
+            </div>
           </div>
-        </div>
-        <div class="return">
-          <i class="iconfont icon-duibijieguo"></i>&nbsp;筛选结果
-        </div>
-        <div class="banyuan"></div>
-        <div class="overContrast">
-          <div class="wanchengduibi">
-            <i class="iconfont icon-wancheng"></i>&nbsp;完成筛选
+          <div class="return">
+            <i class="iconfont icon-duibijieguo"></i>&nbsp;筛选结果
           </div>
+          <div class="banyuan"></div>
+          <div class="overContrast">
+            <div class="wanchengduibi">
+              <i class="iconfont icon-wancheng"></i>&nbsp;完成筛选
+            </div>
+          </div>
+        </section>
+
+
+    <section v-loading.fullscreen.lock="fullscreenLoading" element-loading-text="数据筛选中" class="dataContent" v-else>
+      <el-form :model="params" ref="paramsForm" label-width="0">
+        <div class="operateDiv" >
+          <!--<img @click="toPageOne" src="../assets/lefticon.png"/>-->
+          <el-form-item
+            prop="maxYear"
+            :rules="[
+              { required: true, message: '年份不能为空'},
+              { type: 'number', message: '年份必须为数字值'}
+            ]"
+          >
+            <el-input placeholder="请输入年份" clearable v-model.number="params.maxYear">
+              <template slot="append">之前</template>
+            </el-input>
+          </el-form-item>
         </div>
+      </el-form>
+      <el-table v-loading="Loading" element-loading-text="数据加载中" :data="dataList" border >
+        <el-table-column v-for="(it,index) in dataHead" :fixed="index==0" :prop="index+''" :label="it">
+          <template scope="scope">
+            <el-button class="tdBtn" :style="{color:index==cindex?'red':''}"
+                       @click.native.prevent="setCindex(index)"
+                       type="text"
+                       size="small">
+              {{scope.row[index]}}
+            </el-button>
+            <!--<el-tag :type="index==cindex?'success':'info'" @click="setCindex(index)" ></el-tag>-->
+          </template>
+        </el-table-column>
+      </el-table>
+      <label>请先选择身份证号所在列，再筛选</label>
+    </section>
+    <section @click="submitForm('paramsForm')" class="nothingBottom" >
+      筛选导出
+    </section>
       </div>
     </div>
-    <!--<div>基准和次准-->
-    <!--<div>基准</div>-->
-    <!--<div>次准</div>-->
-    <!--</div>-->
   </div>
 </template>
 
@@ -43,12 +78,11 @@
 <!--</script>-->
 
 <script>
-  // import './Nothing.css'
   import xlsx from 'node-xlsx'
   import child_process from 'child_process'
   import fs from 'fs'
   export default {
-    name: 'stream',
+    name: 'hello',
     data () {
       return {
         msg: 'Welcome to Your Vue.js App',
@@ -152,6 +186,7 @@
       },
       importExcel_1(){
         let finput = this.$refs.importFile1;
+
         if (!finput.onchange)
           finput.onchange = (() => {
             console.log('----->>',finput.value)
@@ -208,6 +243,7 @@
   .background {
     background-color: #f5f5f5;
     display: flex;
+    height: 100vh;
   }
 
   .nav {

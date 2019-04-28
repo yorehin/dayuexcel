@@ -2,9 +2,9 @@
     <div>
       <div class="father-left">
         <div class="heard-image">
-          <img src="static/ESCT.ico" width="112px" height="112px">
+          <img src="static/ESCT.ico" @click="toNav()" width="112px" height="112px">
         </div>
-        <router-link to="/contrast" tag="bi" exact>
+        <router-link to="contrast"  tag="bi" exact>
           <div class="contrast" >
             <div class="contrast-div">
               <i class="iconfont icon-tubiao-"></i>&nbsp;
@@ -12,7 +12,7 @@
             </div>
           </div>
         </router-link>
-        <router-link to="/stream" tag="bi" exact>
+        <router-link to="stream" tag="bi" exact>
           <div class="screen" >
             <div class="shaixuane">
               <i class="iconfont icon-shaixuan"></i>&nbsp;
@@ -44,8 +44,21 @@
 </template>
 
 <script>
+  console.log('==left==>',location)
     export default {
-        name: "left"
+        name: "left",
+      mounted(){
+          // console.log('====>',location)
+      },
+      methods:{
+        close_fun(){
+          console.log('123')
+        },
+          toNav(){
+            console.log('------click')
+            this.$router.push('/left/course');
+          }
+      }
     }
 </script>
 

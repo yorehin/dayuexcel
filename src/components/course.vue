@@ -106,7 +106,7 @@
           <li class="li-font1">导入模板Excel</li>
           <li class="li-font2">导入需修改Excel</li>
           <li class="li-font3">点击"导出"</li>
-          <li class="li-font5"></li>
+          <li class="li-font5">完成</li>
         </ul>
         <br>
         <div class="line3"></div>
@@ -120,17 +120,20 @@
     </div>
 
 
-
   </div>
 </template>
 
 <script>
+    console.log('------course')
     export default {
-      name: 'course'
+      name: 'Course'
     }
 </script>
 
 <style scoped>
+   #course{
+     color: white;
+   }
   .background{
     height: 100vh;
     display: flex;
@@ -211,51 +214,63 @@
     margin-left: 185px;
   }
   .li-font{
+    color: black;
     margin-top: 6px;
     display: flex;
     margin-left: 50px;
   }
   .li-font1{
+    color: black;
     margin-top: 6px;
     margin-left: 108px;
   }
   .li-font2{
+    color: black;
     margin-top: 6px;
     margin-left: 100px;
   }
   .li-font3{
+    color: black;
     margin-top: 6px;
     margin-left: 111px;
   }
   .li-font4{
+    color: black;
     margin-top: 6px;
     margin-left: 101px;
   }
   .li-font5{
+    color: black;
     margin-top: 6px;
     margin-left: 127px;
   }
   .li-font6{
+    color: black;
     margin-top: 6px;
     margin-left: 50px;
   }
   .li-font7{
+    color: black;
     margin-top: 6px;
     margin-left: 124px;
   }
   .li-font8{
+    color: black;
     margin-top: 6px;
     margin-left: 127px;
   }
   .li-font9{
+    color: black;
     margin-top: 6px;
     margin-left: 113px;
   }
   .li-font10{
+    color: black;
     margin-top: 6px;
     margin-left: 97px;
   }
   .li-font11{
+    color: black;
     margin-top: 6px;
     margin-left: 127px;
   }
@@ -392,18 +407,21 @@
     border-radius:50%;
   }
   .line{
+    color: black;
     margin-top: 23px;
     border-top: 1px solid;
     width: 1182px;
     margin-left: 20px;
   }
   .line2{
+    color: black;
     margin-top: 62px;
     border-top: 1px solid;
     width: 1182px;
     margin-left: 20px;
   }
   .line3{
+    color: black;
     margin-top: 23px;
     border-top: 1px solid;
     width: 990px;

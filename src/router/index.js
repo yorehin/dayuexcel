@@ -13,15 +13,16 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    {
-      path: '/update',
-      name: 'Update',
-      component: Update
-    },
+    // {
+    //   path: '/update',
+    //   name: 'Update',
+    //   component: Update
+    // },
     {
       path: '/',
       name: 'Home',
       component: Home,
+      redirect: "/left",
       children:[
         {
           path:'/',
@@ -32,14 +33,15 @@ export default new Router({
           path:'/left',
           name:'left',
           component:Left,
-          childen:[
+          // redirect: "/main/course",
+          children:[
             {
-              path: '/Course',
+              path: '/',
               name: 'Course',
               component: Course
             },
             {
-              path: '/',
+              path: '/contrast',
               name: 'contrast',
               component: Contrast
             },
