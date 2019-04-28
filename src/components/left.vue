@@ -20,7 +20,7 @@
             </div>
           </div>
         </router-link>
-        <router-link tag="bi" exact>
+        <router-link to="" tag="bi" exact>
           <div class="screen" >
             <div class="shaixuane">
               <i class="iconfont icon-tubiao-"></i>&nbsp;
@@ -28,7 +28,7 @@
             </div>
           </div>
         </router-link>
-        <router-link tag="bi" exact>
+        <router-link to="" tag="bi" exact>
           <div class="screen" >
             <div class="shaixuane">
               <i class="iconfont icon-tubiao-"></i>&nbsp;

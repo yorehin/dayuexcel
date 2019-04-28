@@ -13,7 +13,7 @@
           <option value="4">关于我们</option>
         </div>
       </i>
-      <i class="iconfont icon-zuixiaohua" @click="minimize_fun;"></i>
+      <i class="iconfont icon-zuixiaohua" @click="minimize_fun"></i>
       <i class="iconfont icon-zuidahua" @click="maximize_fun"></i>
       <i class="iconfont icon-guanbi" @click="close_fun"></i>
     </div>
@@ -48,11 +48,11 @@
           this.startTime = startTime
       },
       methods:{
-        minimize_fun(){
+        minimize_fun (){
           win.minimize()
-          
+
         },
-        maximize_fun(){
+        maximize_fun (){
           win.maximize()
         },
         close_fun () {
